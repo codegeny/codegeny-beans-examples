@@ -1,0 +1,6 @@
+*
+!/.gitignore
+!/codegeny-beans-examples-jsf/
+!/**/pom.xml
+!/**/src/
+!/**/src/**

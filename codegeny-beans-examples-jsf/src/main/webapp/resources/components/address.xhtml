@@ -1,0 +1,15 @@
+<ui:component xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+              xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+              xmlns:d="http://xmlns.jcp.org/jsf/composite/components">
+
+    <cc:interface>
+        <cc:attribute name="address" type="org.codegeny.beans.diff.MapDiff" required="true"/>
+    </cc:interface>
+
+    <cc:implementation>
+        <d:field label="street" diff="#{cc.attrs.address.street}" id="street" width="10"/>
+        <d:field label="zip code" diff="#{cc.attrs.address.zipCode}" id="zipCode"/>
+        <d:field label="country" diff="#{cc.attrs.address.country}" id="country"/>
+    </cc:implementation>
+
+</ui:component>

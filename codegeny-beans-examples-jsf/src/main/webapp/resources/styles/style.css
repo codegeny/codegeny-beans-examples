@@ -1,0 +1,45 @@
+body {
+    background-color: #dddddd;
+    padding: 20px;
+}
+
+.MODIFIED {
+    background-color: #ffffcc;
+}
+
+.ADDED {
+    background-color: #ccffcc;
+}
+
+.REMOVED {
+    background-color: #ffcccc;
+}
+
+.UNCHANGED {
+    background-color: #ffffff;
+}
+
+.MODIFIED .right, .ADDED .right {
+    color: #007f00;
+}
+
+.MODIFIED .left, .REMOVED .left {
+    color: #7f0000;
+    text-decoration: line-through;
+}
+
+.UNCHANGED .right {
+    color: #000000;
+}
+
+.ADDED .left, .REMOVED .right, .UNCHANGED .left {
+    display: none;
+}
+
+.MODIFIED .right:before {
+    content: ' ';
+}
+
+.row:not(:first-child) {
+    border-top: 1px solid #dddddd;
+}

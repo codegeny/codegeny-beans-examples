@@ -1,0 +1,22 @@
+<ui:component xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+              xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+              xmlns:h="http://xmlns.jcp.org/jsf/html"
+              xmlns:d="http://xmlns.jcp.org/jsf/composite/components">
+
+    <cc:interface>
+        <cc:attribute name="diff" type="org.codegeny.beans.diff.SimpleDiff" required="true"/>
+        <cc:attribute name="label" type="java.lang.String" required="true"/>
+        <cc:attribute name="width" type="java.lang.Integer" default="4"/>
+        <cc:valueHolder name="diff" targets="diff"/>
+    </cc:interface>
+
+    <cc:implementation>
+        <div class="col-sm-2 font-weight-bold #{cc.attrs.diff.getStatus()}">
+            <h:outputText value="#{cc.attrs.label}"/>
+        </div>
+        <div class="col-sm-#{cc.attrs.width} #{cc.attrs.diff.getStatus()}">
+            <d:diff diff="#{cc.attrs.diff}" id="diff"/>
+        </div>
+    </cc:implementation>
+
+</ui:component>
