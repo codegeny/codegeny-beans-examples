@@ -1,5 +1,7 @@
 *
 !/.gitignore
+!/README.md
+!/LICENSE.txt
 !/codegeny-beans-examples-jsf/
 !/**/pom.xml
 !/**/src/
